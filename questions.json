@@ -1,0 +1,202 @@
+[
+  {
+    "q": "Welche Ausstattung gehört zur Grundausstattung von Stuhl und Tisch?",
+    "opts": [
+      "Höhenverstellbarer Stuhl, stützende Rückenlehne und ausreichend Platz am Tisch",
+      "Fester Stuhl, kleiner Tisch und ausschließliches Arbeiten im Sitzen",
+      "Nur ein höhenverstellbarer Tisch; der Stuhl ist unerheblich",
+      "Niedriger Tisch und starre Rückenlehne ohne Verstellmöglichkeit"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Anordnung von Tastatur und Maus wird als ergonomisch beschrieben?",
+    "opts": [
+      "Tastatur und Maus liegen nah beieinander und Handballen können aufliegen",
+      "Tastatur und Maus stehen weit auseinander",
+      "Die Maus liegt hinter dem Bildschirm",
+      "Die Tastatur wird möglichst weit an die Tischkante geschoben"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Sitzhaltung entspricht der Projektaufgabe?",
+    "opts": [
+      "Füße flach auf dem Boden, Knie ungefähr 90 Grad und Schultern entspannt",
+      "Füße hängen frei, Knie durchgestreckt und Schultern hochgezogen",
+      "Füße nur auf den Zehenspitzen und Schultern angespannt",
+      "Füße auf dem Tisch und Unterarme ohne Auflage"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Wie soll der Tisch beim Arbeiten im Stehen eingestellt werden?",
+    "opts": [
+      "Tischplatte ungefähr auf Ellbogenhöhe, Unterarme etwa 90 Grad und Handgelenke gerade",
+      "Tischplatte deutlich unterhalb der Knie",
+      "Tischplatte auf Schulterhöhe",
+      "Tischplatte möglichst hoch über dem Kopf"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Aussage entspricht den gesetzlichen Regeln für Bildschirmarbeitsplätze?",
+    "opts": [
+      "Blendungen und störende Spiegelungen müssen vermieden werden",
+      "Bildschirm darf flimmern, wenn die Tastatur ergonomisch ist",
+      "Bewegungsfläche ist nicht erforderlich",
+      "Bildschirmarbeit soll grundsätzlich ohne Unterbrechung erfolgen"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Was verlangt § 5 ArbSchG laut Projektunterlage zusätzlich?",
+    "opts": [
+      "Eine Gefährdungsbeurteilung durchführen und daraus Schutzmaßnahmen ableiten",
+      "Für jeden Mitarbeiter einen privaten Laptop finanzieren",
+      "Alle Bildschirmarbeitsplätze ausschließlich im Stehen betreiben",
+      "Jede Tastatur jährlich ersetzen"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Maßnahme gehört zum vorbeugenden Brandschutz?",
+    "opts": [
+      "Keine beschädigten Kabel benutzen und Steckdosenleisten nicht überlasten",
+      "Beschädigte Kabel mit Klebeband weiterverwenden",
+      "Mehrere Steckdosenleisten hintereinander schalten",
+      "Kabel lose auf dem Boden liegen lassen"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Was ist im Brand- oder Notfall richtig?",
+    "opts": [
+      "Fluchtwege und Notausgänge frei halten, Alarm auslösen, Gebäude verlassen und Sammelplatz aufsuchen",
+      "Persönliche Gegenstände holen und am Arbeitsplatz bleiben",
+      "Fluchtwege mit Geräten blockieren",
+      "Nur den PC ausschalten und am Arbeitsplatz warten"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Ausstattung passt zur IT-Abteilung?",
+    "opts": [
+      "Leistungsfähiger PC oder Laptop und zwei Monitore",
+      "Nur ein Tablet ohne zusätzliche Peripherie",
+      "Standard-PC mit einem Monitor",
+      "Smartphone mit Headset als vollständiger Arbeitsplatz"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Ausstattung ist für den Kundensupport vorgesehen?",
+    "opts": [
+      "PC, zwei Monitore und ein gutes Headset",
+      "Leistungsfähige Workstation mit CAD-Zubehör",
+      "Laptop oder Tablet mit Dockingstation",
+      "Standard-PC, zwei Monitore und Scanner"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Reihenfolge beschreibt die vollständige Computereinrichtung?",
+    "opts": [
+      "Anforderungen prüfen → Hardware aufbauen → Windows installieren → System aktualisieren → Schutz einrichten → Programme installieren",
+      "Programme installieren → Schutz einrichten → Windows installieren → Hardware aufbauen → Anforderungen prüfen → System aktualisieren",
+      "Windows installieren → Programme installieren → Anforderungen prüfen → Schutz einrichten → Hardware aufbauen → System aktualisieren",
+      "Hardware aufbauen → Programme installieren → System aktualisieren → Windows installieren → Schutz einrichten → Anforderungen prüfen"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Was gehört zur Prüfung der Netzwerkeinstellungen?",
+    "opts": [
+      "IP-Adresse automatisch per DHCP oder nach Vorgabe setzen",
+      "IP-Adresse immer auf 127.0.0.1 setzen",
+      "Netzwerkkarte grundsätzlich deaktivieren",
+      "Nur den Monitor neu starten"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Was gehört nach der Anmeldung am Firmennetzwerk zum Zugriffstest?",
+    "opts": [
+      "Server, Drucker, Freigaben und Benutzeranmeldung testen",
+      "Nur die Bildschirmhelligkeit prüfen",
+      "Computer vom Netzwerk trennen und keine Zugriffe testen",
+      "Nur die Lautsprecher testen"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Was soll bei der Einrichtung dokumentiert werden?",
+    "opts": [
+      "Gerätename, Standort und durchgeführte Tests",
+      "Nur die private Telefonnummer des Mitarbeiters",
+      "Nur Gehäusefarbe und Monitorgröße",
+      "Nur der Kaufpreis des Computers"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Wie soll die obere Bildschirmkante eingestellt werden?",
+    "opts": [
+      "Ungefähr auf Augenhöhe",
+      "Ungefähr auf Kniehöhe",
+      "Deutlich über Kopfhöhe",
+      "Direkt auf Tischplattenhöhe"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Wie wird die Höhe des Schreibtisches laut Anleitung verändert?",
+    "opts": [
+      "Mit den Pfeiltasten rechts am Tisch",
+      "Durch Drehen der Monitorhalterung",
+      "Durch Verschieben der Tastatur",
+      "Durch Abschrauben der Tischbeine"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Warum wird die Tischhöhe für jede Person angepasst?",
+    "opts": [
+      "Damit Rücken, Nacken und Schultern möglichst entspannt bleiben",
+      "Damit alle Mitarbeiter exakt dieselbe Körperhaltung einnehmen",
+      "Damit der Monitor für alle gleich hoch bleibt",
+      "Damit nur im Sitzen gearbeitet werden kann"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Was umfasst die Checkliste vor der Übergabe?",
+    "opts": [
+      "Arbeitsplatz einstellen, Erreichbarkeit und Sicherheit prüfen, Ausstattung testen und Mitarbeiter einweisen",
+      "Nur den Computer einschalten",
+      "Nur den Fluchtweg prüfen",
+      "Nur Kabel kontrollieren"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche organisatorische Maßnahme wird für Bildschirmarbeit genannt?",
+    "opts": [
+      "Bildschirmarbeit durch andere Tätigkeiten oder Erholungszeiten unterbrechen",
+      "Bildschirmarbeit ohne Unterbrechung ausdehnen",
+      "Unterbrechungen nur bei flimmerndem Bildschirm",
+      "Nur eine lange Pause am Ende des Arbeitstags"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Welche Kernaussage fasst das Projekt zusammen?",
+    "opts": [
+      "Ein guter Arbeitsplatz passt zur Person und zur Arbeitsaufgabe",
+      "Ein guter Arbeitsplatz ist für alle Personen und Aufgaben identisch",
+      "Ein guter Arbeitsplatz wird ausschließlich nach dem Kaufpreis ausgewählt",
+      "Ein guter Arbeitsplatz benötigt keine Sicherheitsprüfung"
+    ],
+    "a": 0
+  }
+]

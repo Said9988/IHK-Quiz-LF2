@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IHK Quiz – Ergonomischer IT-Arbeitsplatz</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#07131f,#0b3550);color:#f5fbff;font-family:Segoe UI,Arial,sans-serif;min-height:100vh}.wrap{width:min(1050px,94vw);margin:auto;padding:28px 0}.card{background:#102b3d;border:1px solid #2b5870;border-radius:22px;padding:28px;box-shadow:0 20px 60px #0006}h1{font-size:clamp(34px,6vw,62px);line-height:1;margin:10px 0}h2{margin-top:0}p{color:#b4c9d4;line-height:1.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.btn{border:0;border-radius:13px;padding:14px 20px;font-weight:800;cursor:pointer}.primary{background:#b9f35d;color:#14200c}.secondary{background:#176078;color:#fff}input{width:100%;padding:14px;border-radius:12px;border:1px solid #37677e;background:#081b29;color:white;margin-bottom:10px}.hidden{display:none}.center{text-align:center}.code{font-size:54px;font-weight:1000;letter-spacing:9px;color:#b9f35d}.players{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.pill{background:#173f52;padding:7px 11px;border-radius:99px}.top{display:flex;justify-content:space-between}.progress{height:9px;background:#173847;border-radius:99px;overflow:hidden}.bar{height:100%;background:#b9f35d}.question{font-size:clamp(23px,4vw,37px);font-weight:850;margin:24px 0}.answers{display:grid;grid-template-columns:1fr 1fr;gap:14px}.answer{min-height:100px;text-align:left;padding:18px;border-radius:16px;border:2px solid #2b5970;background:#14374b;color:white;font-size:17px;font-weight:700;cursor:pointer}.answer:hover{background:#1a4860}.answer.correct{background:#175335;border-color:#79e49e}.answer.wrong{background:#552b35;border-color:#ff7b7b}.row{display:grid;grid-template-columns:45px 1fr auto;gap:12px;align-items:center;background:#0b2232;padding:13px;border-radius:12px;margin:8px 0}.score{color:#b9f35d;font-weight:900}.notice{margin-top:14px;background:#0b2332;border:1px solid #28556c;border-radius:12px;padding:12px;color:#c8dbe4}@media(max-width:700px){.grid,.answers{grid-template-columns:1fr}.card{padding:20px}}
+</style></head><body><div class="wrap">
+<div id="home" class="card"><div class="pill">IHK · Lernfeld 02</div><h1>Quiz-Arena</h1><p>Ergonomischer IT-Arbeitsplatz · 20 IHK-orientierte Fragen · bis zu 4 Spieler inklusive Host.</p>
+<div class="grid"><div class="card"><h2>Host</h2><p>Du bist gleichzeitig Spieler 1 und Spielleiter.</p><input id="hostName" maxlength="18" placeholder="Dein Name"><button class="btn primary" onclick="create()">Raum erstellen</button></div>
+<div class="card"><h2>Spieler</h2><input id="code" maxlength="4" placeholder="Raumcode"><input id="name" maxlength="18" placeholder="Dein Name"><button class="btn secondary" onclick="join()">Beitreten</button></div></div>
+<div id="msg" class="notice hidden"></div></div>
+<div id="lobby" class="card hidden center"><div>Raumcode</div><div id="room" class="code"></div><h2>Lobby</h2><div id="players" class="players"></div><div id="lobbyMsg" class="notice"></div><button id="start" class="btn primary hidden" style="margin-top:18px" onclick="start()">Erste Frage starten</button></div>
+<div id="quiz" class="card hidden"><div class="top"><span id="qn"></span><b id="timer">20</b></div><div class="progress"><div id="bar" class="bar"></div></div><div id="q" class="question"></div><div id="answers" class="answers"></div><div id="status" class="notice"></div><button id="next" class="btn primary hidden" style="margin-top:16px" onclick="next()">Nächste Frage</button></div>
+<div id="result" class="card hidden"><div class="center"><h1 id="resultTitle">Ergebnis</h1><p id="correct"></p></div><div id="board"></div><div class="center"><button id="next2" class="btn primary hidden" onclick="next()">Nächste Frage</button></div></div>
+<div id="final" class="card hidden center"><h1>Endergebnis</h1><div id="finalBoard"></div></div>
+</div>
+<script>
+let ws,role,id,room,state,q,timer,myAnswered=false;
+const $=x=>document.getElementById(x);
+function show(x){["home","lobby","quiz","result","final"].forEach(y=>$(y).classList.add("hidden"));$(x).classList.remove("hidden")}
+function connect(){ws=new WebSocket((location.protocol==="https:"?"wss://":"ws://")+location.host);ws.onopen=()=>{};ws.onmessage=e=>handle(JSON.parse(e.data));ws.onclose=()=>{if(role) alert("Verbindung zum Quizserver wurde beendet.")};ws.onerror=()=>alert("Serververbindung fehlgeschlagen.");}
+function create(){let n=$("hostName").value.trim();if(!n)return alert("Bitte deinen Namen eingeben.");role="host";connect();ws.onopen=()=>ws.send(JSON.stringify({type:"create",name:n}))}
+function join(){let c=$("code").value.trim().toUpperCase(),n=$("name").value.trim();if(c.length!==4||!n)return alert("Raumcode und Name eingeben.");role="player";room=c;connect();ws.onopen=()=>ws.send(JSON.stringify({type:"join",code:c,name:n}))}
+function handle(m){
+ if(m.type==="error"){alert(m.message);return}
+ if(m.type==="created"){state=m.state;room=state.code;$("room").textContent=room;$("start").classList.remove("hidden");$("lobbyMsg").textContent="Teile den Code mit bis zu 3 weiteren Spielern.";show("lobby");renderPlayers();return}
+ if(m.type==="joined"){id=m.id;state=m.state;room=state.code;$("room").textContent=room;$("lobbyMsg").textContent="Du bist drin. Warte auf den Host.";show("lobby");renderPlayers();return}
+ if(m.type==="lobby"){state=m.state;renderPlayers();return}
+ if(m.type==="question"){q=m.question;state=m.state;myAnswered=false;renderQuestion();return}
+ if(m.type==="progress"){state=m.state;updateStatus();return}
+ if(m.type==="answerSaved"){myAnswered=true;$("status").textContent="Antwort gespeichert – warte auf die anderen.";return}
+ if(m.type==="results"){state=m.state;renderResult(m.correct);return}
+ if(m.type==="final"){state=m.state;renderFinal();return}
+ if(m.type==="closed"){alert("Der Host hat den Raum geschlossen.");location.reload()}
+}
+function renderPlayers(){$("players").innerHTML=state.players.map(p=>`<span class="pill">${esc(p.name)}</span>`).join("")}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function start(){ws.send(JSON.stringify({type:"start"}))}
+function next(){ws.send(JSON.stringify({type:"next"}))}
+function renderQuestion(){show("quiz");$("qn").textContent=`Frage ${state.qIndex+1} / 20`;$("bar").style.width=((state.qIndex+1)/20*100)+"%";$("q").textContent=q.q;$("answers").innerHTML=q.opts.map((o,i)=>`<button class="answer" onclick="answer(${i})"><b>${String.fromCharCode(65+i)}.</b> ${esc(o)}</button>`).join("");$("status").textContent="Wähle eine Antwort."; $("next").classList.add("hidden");let left=20;clearInterval(timer);$("timer").textContent=left;timer=setInterval(()=>{left--;$("timer").textContent=left;if(left<=0){clearInterval(timer);if(!myAnswered)ws.send(JSON.stringify({type:"answer",choice:-1}));if(role==="host")ws.send(JSON.stringify({type:"end"}))}},1000);updateStatus()}
+function answer(i){if(myAnswered)return;myAnswered=true;document.querySelectorAll(".answer").forEach(x=>x.disabled=true);ws.send(JSON.stringify({type:"answer",choice:i}))}
+function updateStatus(){$("status").textContent=`Antworten: ${state.answered}/${state.total}`+(myAnswered?" · Deine Antwort wurde gespeichert.":"")}
+function boardHtml(){return [...state.players].sort((a,b)=>b.score-a.score).map((p,i)=>`<div class="row"><b>${i+1}</b><span>${esc(p.name)}</span><b class="score">${p.score.toLocaleString("de-DE")} P</b></div>`).join("")}
+function renderResult(correct){clearInterval(timer);show("result");$("resultTitle").textContent=`Frage ${state.qIndex+1} Ergebnis`;$("correct").textContent=`Richtige Antwort: ${q.opts[correct]}`;$("board").innerHTML=boardHtml();$("next2").classList.toggle("hidden",role!=="host");}
+function renderFinal(){show("final");$("finalBoard").innerHTML=boardHtml()}
+</script></body></html>
