@@ -1,16 +1,20 @@
-# IHK Quiz – 4 Spieler
+# IHK Quiz LF2 – 50 Fragen
 
-Der Host zählt als Spieler. Insgesamt sind maximal 4 Personen im Raum.
+- 50 anspruchsvolle Fragen zum Thema „Einrichtung eines ergonomischen IT-Arbeitsplatzes“
+- 60 Sekunden pro Frage
+- maximal 4 Personen inklusive Host
+- Host ist gleichzeitig Mitspieler
+- zentrale WebSocket-Verbindung, kein Peer-to-Peer
+- richtige Antworten sind über A–D verteilt
 
 ## Lokal
-Node.js 18+ installieren, dann:
+Node.js 18+:
 npm install
 npm start
-Browser: http://localhost:3000
+
+Dann http://localhost:3000 öffnen.
 
 ## Render
-GitHub-Repository mit den Dateien dieses Projekts erstellen.
-Auf Render: New -> Web Service -> GitHub Repository verbinden.
+Web Service:
 Build Command: npm install
 Start Command: npm start
-Free Plan genügt für einen kleinen Test. Render unterstützt WebSockets; Free Web Services können nach 15 Minuten ohne eingehenden Traffic einschlafen.

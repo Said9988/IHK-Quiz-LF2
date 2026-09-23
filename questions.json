@@ -1,202 +1,552 @@
 [
   {
-    "q": "Welche Ausstattung gehört zur Grundausstattung von Stuhl und Tisch?",
-    "opts": [
-      "Höhenverstellbarer Stuhl, stützende Rückenlehne und ausreichend Platz am Tisch",
-      "Fester Stuhl, kleiner Tisch und ausschließliches Arbeiten im Sitzen",
-      "Nur ein höhenverstellbarer Tisch; der Stuhl ist unerheblich",
-      "Niedriger Tisch und starre Rückenlehne ohne Verstellmöglichkeit"
+    "id": 1,
+    "question": "Welche Ausstattung ist laut Aufgabenmaterial speziell für den Vertrieb bzw. Außendienst vorgesehen?",
+    "options": [
+      "Leistungsfähige Workstation und zwei Monitore",
+      "Laptop oder Tablet, Dockingstation und Headset",
+      "Standard-PC, zwei Monitore und Scanner",
+      "PC, zwei Monitore und ausschließlich Lautsprecher"
     ],
-    "a": 0
+    "correct": 1
   },
   {
-    "q": "Welche Anordnung von Tastatur und Maus wird als ergonomisch beschrieben?",
-    "opts": [
-      "Tastatur und Maus liegen nah beieinander und Handballen können aufliegen",
-      "Tastatur und Maus stehen weit auseinander",
-      "Die Maus liegt hinter dem Bildschirm",
-      "Die Tastatur wird möglichst weit an die Tischkante geschoben"
+    "id": 2,
+    "question": "Welche Aussage zum Raum und Arbeitsplatz ist mit dem Lernmaterial vereinbar?",
+    "options": [
+      "Lärm und Raumklima spielen für den Arbeitsplatz grundsätzlich keine Rolle",
+      "Ein Arbeitsplatz ist ergonomisch, wenn der Monitor stark reflektiert",
+      "Ausreichender Bewegungsraum ist bei Bildschirmarbeit nicht erforderlich",
+      "Ein Arbeitsplatz benötigt ausreichend Bewegungsfläche und soll gute Lichtverhältnisse ohne störende Blendung bieten"
     ],
-    "a": 0
+    "correct": 3
   },
   {
-    "q": "Welche Sitzhaltung entspricht der Projektaufgabe?",
-    "opts": [
-      "Füße flach auf dem Boden, Knie ungefähr 90 Grad und Schultern entspannt",
-      "Füße hängen frei, Knie durchgestreckt und Schultern hochgezogen",
-      "Füße nur auf den Zehenspitzen und Schultern angespannt",
-      "Füße auf dem Tisch und Unterarme ohne Auflage"
+    "id": 3,
+    "question": "Welche Reihenfolge beschreibt die Einrichtung eines Computers im Lernmaterial am sinnvollsten?",
+    "options": [
+      "Programme installieren, danach Hardware prüfen, dann Windows installieren",
+      "Nur Windows installieren und anschließend direkt produktiv arbeiten",
+      "Netzwerk anschließen, Benutzerrechte erweitern, Firmware entfernen, danach Windows installieren",
+      "Anforderungen prüfen, Hardware aufbauen, Windows installieren, System aktualisieren, Schutz einrichten, Programme installieren"
     ],
-    "a": 0
+    "correct": 3
   },
   {
-    "q": "Wie soll der Tisch beim Arbeiten im Stehen eingestellt werden?",
-    "opts": [
-      "Tischplatte ungefähr auf Ellbogenhöhe, Unterarme etwa 90 Grad und Handgelenke gerade",
-      "Tischplatte deutlich unterhalb der Knie",
-      "Tischplatte auf Schulterhöhe",
-      "Tischplatte möglichst hoch über dem Kopf"
+    "id": 4,
+    "question": "Welche Kombination enthält ausschließlich Maßnahmen, die im Material zur Vermeidung von Stolper- und Brandgefahren genannt werden?",
+    "options": [
+      "Kabel lose auf Laufwegen verteilen und Fluchtwege als Ablage nutzen",
+      "Kabel unter Türen einklemmen und Steckdosenleisten vollständig auslasten",
+      "Kabel sicher verlegen, beschädigte Kabel vermeiden und Steckdosenleisten nicht überlasten",
+      "Beschädigte Kabel weiterverwenden und Feuerlöscher verdecken"
     ],
-    "a": 0
+    "correct": 2
   },
   {
-    "q": "Welche Aussage entspricht den gesetzlichen Regeln für Bildschirmarbeitsplätze?",
-    "opts": [
-      "Blendungen und störende Spiegelungen müssen vermieden werden",
-      "Bildschirm darf flimmern, wenn die Tastatur ergonomisch ist",
-      "Bewegungsfläche ist nicht erforderlich",
-      "Bildschirmarbeit soll grundsätzlich ohne Unterbrechung erfolgen"
+    "id": 5,
+    "question": "Welche Aussage ist bei einer ganzheitlichen Übergabe am ehesten falsch?",
+    "options": [
+      "Fluchtwege müssen frei bleiben",
+      "Kabel dürfen keine Stolperstellen bilden",
+      "Die Ausstattung sollte getestet und der Mitarbeiter eingewiesen werden",
+      "Ein ergonomischer Arbeitsplatz benötigt keine individuelle Anpassung"
     ],
-    "a": 0
+    "correct": 3
   },
   {
-    "q": "Was verlangt § 5 ArbSchG laut Projektunterlage zusätzlich?",
-    "opts": [
-      "Eine Gefährdungsbeurteilung durchführen und daraus Schutzmaßnahmen ableiten",
-      "Für jeden Mitarbeiter einen privaten Laptop finanzieren",
-      "Alle Bildschirmarbeitsplätze ausschließlich im Stehen betreiben",
-      "Jede Tastatur jährlich ersetzen"
+    "id": 6,
+    "question": "Welche Reihenfolge beschreibt den Anschluss eines neu eingerichteten Computers an das interne Netzwerk?",
+    "options": [
+      "LAN verbinden, Netzwerkeinstellungen prüfen, bei Bedarf Firmennetzwerk/Domain anmelden, Zugriffe testen, Einrichtung dokumentieren",
+      "Nur LAN verbinden und anschließend ohne Prüfung produktiv arbeiten",
+      "Zuerst alle Benutzerrechte erweitern und danach das LAN-Kabel anschließen",
+      "Zuerst Drucker installieren und Netzwerkzugriff grundsätzlich überspringen"
     ],
-    "a": 0
+    "correct": 0
   },
   {
-    "q": "Welche Maßnahme gehört zum vorbeugenden Brandschutz?",
-    "opts": [
-      "Keine beschädigten Kabel benutzen und Steckdosenleisten nicht überlasten",
-      "Beschädigte Kabel mit Klebeband weiterverwenden",
-      "Mehrere Steckdosenleisten hintereinander schalten",
-      "Kabel lose auf dem Boden liegen lassen"
+    "id": 7,
+    "question": "Welche Aussage über Tastatur und Maus entspricht dem Material?",
+    "options": [
+      "Die Maus soll grundsätzlich hinter dem Monitor liegen",
+      "Beide sollen möglichst weit vom Benutzer entfernt stehen",
+      "Beide sollen bequem erreichbar und nah am Benutzer angeordnet sein",
+      "Die Tastatur soll außerhalb der normalen Reichweite platziert werden"
     ],
-    "a": 0
+    "correct": 2
   },
   {
-    "q": "Was ist im Brand- oder Notfall richtig?",
-    "opts": [
-      "Fluchtwege und Notausgänge frei halten, Alarm auslösen, Gebäude verlassen und Sammelplatz aufsuchen",
-      "Persönliche Gegenstände holen und am Arbeitsplatz bleiben",
-      "Fluchtwege mit Geräten blockieren",
-      "Nur den PC ausschalten und am Arbeitsplatz warten"
+    "id": 8,
+    "question": "Welche Kombination aus Arbeitsplatzanforderungen ist vollständig?",
+    "options": [
+      "Bewegungsraum, gute Beleuchtung ohne störende Blendung, angenehme Temperatur/Luft und möglichst geringe Lärmbelastung",
+      "Nur maximale Raumhelligkeit und möglichst hohe Temperatur",
+      "Möglichst wenig Bewegungsraum und vollständige Abschirmung des Arbeitsplatzes",
+      "Starke direkte Beleuchtung des Bildschirms und möglichst hohe Geräuschkulisse"
     ],
-    "a": 0
+    "correct": 0
   },
   {
-    "q": "Welche Ausstattung passt zur IT-Abteilung?",
-    "opts": [
-      "Leistungsfähiger PC oder Laptop und zwei Monitore",
-      "Nur ein Tablet ohne zusätzliche Peripherie",
-      "Standard-PC mit einem Monitor",
-      "Smartphone mit Headset als vollständiger Arbeitsplatz"
+    "id": 9,
+    "question": "Welche Situation widerspricht unmittelbar den im Lernmaterial genannten Anforderungen an den Arbeitsplatz?",
+    "options": [
+      "Ein Kabel liegt quer über einer häufig genutzten Laufstrecke und bildet eine Stolperstelle",
+      "Tastatur und Maus sind bequem erreichbar",
+      "Ausreichender Bewegungsraum und gute Beleuchtung ohne störende Blendung",
+      "Der Monitor kann gedreht und geneigt werden"
     ],
-    "a": 0
+    "correct": 0
   },
   {
-    "q": "Welche Ausstattung ist für den Kundensupport vorgesehen?",
-    "opts": [
-      "PC, zwei Monitore und ein gutes Headset",
-      "Leistungsfähige Workstation mit CAD-Zubehör",
-      "Laptop oder Tablet mit Dockingstation",
+    "id": 10,
+    "question": "Welche Aussage zur Dokumentation nach der Netzwerkeinrichtung entspricht dem Material?",
+    "options": [
+      "Nur das private Passwort des Mitarbeiters wird dokumentiert",
+      "Gerätename, Standort und durchgeführte Tests sollen festgehalten werden",
+      "Nur die Monitorhöhe wird dokumentiert",
+      "Die Dokumentation wird ausdrücklich als unnötig bezeichnet"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "question": "Welche Aussage über die Übergabe eines Arbeitsplatzes ist am vollständigsten?",
+    "options": [
+      "Nur der Rechner wird eingeschaltet",
+      "Ausschließlich der Drucker wird getestet",
+      "Nur das Benutzerkonto wird geprüft",
+      "Ergonomie, Erreichbarkeit der Eingabegeräte, Blendung, Bewegungsraum, Kabel, Fluchtweg, Brandschutz, Funktionstest und Einweisung werden berücksichtigt"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 12,
+    "question": "Ein Mitarbeiter möchte während der Arbeit regelmäßig zwischen Sitzen und Stehen wechseln. Welche Aussage entspricht dem Material?",
+    "options": [
+      "Wechselnde Haltungen werden als unnötig beschrieben",
+      "Der Arbeitsplatz darf nur im Sitzen genutzt werden",
+      "Beim Wechsel muss der Monitor jedes Mal entfernt werden",
+      "Der Wechsel zwischen Sitzen und Stehen wird ausdrücklich empfohlen"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 13,
+    "question": "Welche Aussage fasst die im Material genannten Ziele der vollständigen Computer-Einrichtung am besten zusammen?",
+    "options": [
+      "Nur Windows muss installiert werden; Netzwerk und Benutzerrechte sind nachrangig",
+      "Der Computer soll möglichst schnell eingeschaltet werden, unabhängig von Updates und Schutz",
+      "Der Computer soll vollständig eingerichtet, aktualisiert, geschützt, mit benötigten Programmen versehen und für die vorgesehene Nutzung getestet sein",
+      "Die Installation ist abgeschlossen, sobald der Desktop sichtbar ist"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Welche Aussage zur Gefährdungsbeurteilung nach § 5 ArbSchG passt zum Lernmaterial?",
+    "options": [
+      "Sie prüft mögliche Belastungen und dient der Festlegung von Schutzmaßnahmen",
+      "Sie betrifft ausschließlich die Auswahl von Monitoren",
+      "Sie ersetzt die Unterweisung der Beschäftigten vollständig",
+      "Sie ist nur bei der Anschaffung eines neuen Computers erforderlich"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 15,
+    "question": "Welche Aussage ist eine vollständige Kombination aus Ergonomie und Arbeitsschutz aus dem Material?",
+    "options": [
+      "Freie Fluchtwege sind nur für Besucher relevant",
+      "Maximale Bildschirmhelligkeit, feste Sitzhaltung und dauerhaftes Sitzen",
+      "Möglichst wenig Bewegungsraum und dauerhaft unveränderte Haltung",
+      "Ergonomische Anordnung, ausreichender Bewegungsraum, Vermeidung von Blendung und Unterbrechung langer Bildschirmarbeit"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 16,
+    "question": "Welche Aussage verbindet die Anforderungen an Netzwerksicherheit und Benutzerrechte am treffendsten?",
+    "options": [
+      "Jeder Benutzer soll auf alle Serverfreigaben zugreifen können",
+      "Der richtige Benutzer soll nur die erlaubten Zugriffe erhalten",
+      "Netzwerkzugriffe sollen grundsätzlich unabhängig von der Aufgabe freigeschaltet werden",
+      "Die Berechtigungen müssen nicht dokumentiert oder geprüft werden"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "question": "Was ist im Brand- oder Notfall nach dem beschriebenen Ablauf zu tun?",
+    "options": [
+      "Alarm auslösen, Gebäude verlassen und den Sammelplatz aufsuchen",
+      "Gebäude verlassen, nachdem die Fluchtwege blockiert wurden",
+      "Zuerst alle Computer herunterfahren und erst danach Alarm auslösen",
+      "Im Raum bleiben, bis der Feuerlöscher leer ist"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 18,
+    "question": "Welche Kombination ist für die Technikabteilung im Material vorgesehen?",
+    "options": [
+      "Leistungsfähige Workstation und zwei Monitore",
+      "Tablet, Dockingstation und Scanner",
+      "Standard-PC und nur ein Monitor",
+      "Notebook und ausschließlich ein Headset"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 19,
+    "question": "Warum werden vor der Installation eines Computers zunächst Gerät, Abteilung, Benutzer und benötigte Programme geklärt?",
+    "options": [
+      "Damit die Ausstattung und Konfiguration zur vorgesehenen Aufgabe passen",
+      "Damit grundsätzlich jedes Gerät mit maximalen Rechten betrieben wird",
+      "Damit die Gefährdungsbeurteilung entfällt",
+      "Damit keine Hardware angeschlossen werden muss"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 20,
+    "question": "Ein Computer ist physisch mit dem LAN verbunden, kann aber nicht auf eine benötigte Freigabe zugreifen. Welche Vorgehensweise entspricht dem Material am ehesten?",
+    "options": [
+      "Die Netzwerkeinstellungen und anschließend die vorgesehenen Zugriffe prüfen",
+      "Den Rechner sofort als vollständig eingerichtet betrachten",
+      "Alle Sicherheitsfunktionen deaktivieren",
+      "Den Benutzer automatisch zum Administrator machen"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 21,
+    "question": "Welche Aussage zur Monitorposition entspricht der beschriebenen Einstellung?",
+    "options": [
+      "Der Blick soll grundsätzlich nach oben gerichtet sein",
+      "Die obere Bildschirmkante liegt deutlich unter Brusthöhe",
+      "Die obere Bildschirmkante liegt ungefähr auf Augenhöhe und der Blick geht leicht nach unten",
+      "Der Monitor muss immer exakt senkrecht über dem Kopf stehen"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "question": "Welche Aussage verbindet die rechtlichen und praktischen Anforderungen des Materials am präzisesten?",
+    "options": [
+      "Rechtliche Anforderungen betreffen unter anderem Arbeitsplatzgestaltung und Gefährdungsbeurteilung; praktisch müssen ergonomische, sichere und funktionale Bedingungen umgesetzt werden",
+      "Rechtliche Anforderungen beziehen sich ausschließlich auf Computerleistung",
+      "Eine Gefährdungsbeurteilung ersetzt alle ergonomischen Einstellungen",
+      "Brandschutz ist unabhängig von Fluchtwegen und Arbeitsplatzgestaltung"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 23,
+    "question": "Ein Support-Mitarbeiter soll gleichzeitig Tickets bearbeiten und telefonieren. Welche Ausstattung wird im Material dafür ausdrücklich genannt?",
+    "options": [
+      "Workstation ohne Headset",
+      "Tablet und Scanner",
+      "PC, zwei Monitore und gutes Headset",
+      "Standard-PC mit nur einem Monitor"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "question": "Warum soll die Ausstattung einer Abteilung an deren tatsächliche Aufgaben angepasst werden?",
+    "options": [
+      "Damit grundsätzlich überall die teuerste Hardware eingesetzt wird",
+      "Damit jede Abteilung identische Geräte erhält",
+      "Damit unnötige Kosten vermieden werden und die Ausstattung zur Aufgabe passt",
+      "Damit Sicherheitsupdates nur in einzelnen Abteilungen nötig sind"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 25,
+    "question": "Welche Ausstattung passt laut Lernmaterial am besten zur IT-Abteilung?",
+    "options": [
+      "Laptop oder Tablet ohne weitere Geräte",
+      "Standard-PC und ein Drucker",
+      "Nur ein Tablet und ein Headset",
+      "Leistungsfähiger PC oder Laptop und zwei Monitore"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 26,
+    "question": "Warum soll die Einrichtung eines Netzwerkgeräts dokumentiert werden?",
+    "options": [
+      "Damit Updates künftig entfallen",
+      "Damit keine Benutzeranmeldung mehr benötigt wird",
+      "Damit alle Rechner denselben Gerätenamen erhalten",
+      "Damit Gerätename, Standort und durchgeführte Tests nachvollziehbar festgehalten sind"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 27,
+    "question": "Welche Aussage zur betrieblichen Brandschutzorganisation entspricht dem Lernmaterial?",
+    "options": [
+      "Feuerlöscher sollen möglichst versteckt werden",
+      "Fluchtwege müssen dauerhaft gekennzeichnet und geeignete Feuerlöscher gut erreichbar sein",
+      "Mitarbeiter müssen nur einmal bei Einstellung unterwiesen werden",
+      "Fluchtwege dürfen bei Platzmangel vorübergehend als Lagerfläche dienen"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "question": "Ein Rechner erhält seine IP-Adresse automatisch. Welche im Material genannte Möglichkeit beschreibt dies?",
+    "options": [
+      "BIOS-Reset",
+      "DHCP",
+      "Firmware-Flash",
+      "Monitor-PnP"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "question": "Ein Mitarbeiter sitzt an einem Bildschirmarbeitsplatz. Welche Kombination beschreibt die im Lernmaterial geforderte Sitzhaltung am vollständigsten?",
+    "options": [
+      "Füße flach, Knie etwa 90°, Unterarme locker auf dem Tisch, Schultern entspannt",
+      "Füße nach hinten stellen, Knie deutlich unter 90°, Schultern hochziehen",
+      "Füße nur mit den Zehenspitzen aufsetzen, Knie gestreckt, Unterarme frei schwebend",
+      "Füße flach, Knie vollständig gestreckt, Schultern nach vorne ziehen"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 30,
+    "question": "Welche Prüfung gehört ausdrücklich zur Übergabe eines eingerichteten Arbeitsplatzes?",
+    "options": [
+      "Der Mitarbeiter muss den Computer selbst zusammenbauen",
+      "Die Netzwerkkarte muss ausgebaut werden",
+      "Die Ausstattung wird getestet und der Benutzer kurz eingewiesen",
+      "Alle vorhandenen Benutzerrechte werden pauschal erweitert"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 31,
+    "question": "Welche Kombination nennt das Material ausdrücklich als Teil der Systemaktualisierung?",
+    "options": [
+      "Nur Hintergrundbilder und Schriftarten",
+      "Treiber, Windows-Updates und Firmware",
+      "Nur Druckerpatronen und Monitorhelligkeit",
+      "Ausschließlich Benutzerpasswörter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "question": "Eine Person stellt den Schreibtisch im Sitzen ein. Die Füße stehen nicht flach auf dem Boden. Was folgt aus der beschriebenen Einstellung?",
+    "options": [
+      "Zunächst sollte die Sitzposition einschließlich Stuhl korrigiert und danach die Tischhöhe passend eingestellt werden",
+      "Die Tischhöhe sollte unabhängig davon unverändert bleiben",
+      "Nur die Monitorhöhe darf angepasst werden",
+      "Die Person sollte die Schultern hochziehen, um die fehlende Fußauflage auszugleichen"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 33,
+    "question": "Ein höhenverstellbarer Tisch wird für eine neue Person eingerichtet. Welche Reihenfolge entspricht der beschriebenen Vorgehensweise beim Sitzen?",
+    "options": [
+      "Tisch einstellen, danach Stuhl und anschließend Monitor",
+      "Zuerst Stuhl einstellen, dann Tisch und anschließend den Monitor passend ausrichten",
+      "Monitor einstellen, dann Tisch und zuletzt Stuhl",
+      "Zuerst Tastatur einstellen und daraus die Tischhöhe ableiten"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "question": "Ein neuer Rechner wird für eine Abteilung vorbereitet. Welche Entscheidung sollte laut Material vor dem Aufbau der Hardware getroffen werden?",
+    "options": [
+      "Welche Farbe das Gehäuse haben soll",
+      "Welche Anforderungen sich aus Gerät, Abteilung, Benutzer und benötigten Programmen ergeben",
+      "Ob der Benutzer Administrator für alle Systeme werden soll",
+      "Ob sämtliche Sicherheitsfunktionen deaktiviert werden"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "question": "Warum soll Bildschirmarbeit laut Lernmaterial durch andere Tätigkeiten oder Erholungszeiten unterbrochen werden?",
+    "options": [
+      "Damit der Computer weniger Strom verbraucht",
+      "Damit die Arbeitszeit automatisch verkürzt wird",
+      "Damit keine Updates mehr erforderlich sind",
+      "Damit einseitige Belastungen unterbrochen werden"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 36,
+    "question": "Welche Aussage beschreibt die individuelle Einstellung des höhenverstellbaren Tisches am besten?",
+    "options": [
+      "Eine feste Standardhöhe gilt für alle Personen",
+      "Die Höhe wird für jede Person angepasst, damit Rücken, Nacken und Schultern möglichst entspannt bleiben",
+      "Die Tischhöhe richtet sich ausschließlich nach der Raumhöhe",
+      "Die Tischhöhe wird nur nach der Monitorgröße bestimmt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "question": "Ein Unternehmen richtet einen neuen Arbeitsplatz ein. Welche Aussage beschreibt die im Material enthaltene Gesamtlogik am besten?",
+    "options": [
+      "Arbeitsplatz, Ausstattung und Konfiguration werden an Person, Aufgabe und sichere Nutzung angepasst",
+      "Jeder Mitarbeiter erhält unabhängig von seiner Aufgabe dieselbe Hardware",
+      "Ergonomie wird erst nach einem Unfall berücksichtigt",
+      "Sicherheit und Ergonomie sind unabhängig von der Arbeitsplatzgestaltung"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 38,
+    "question": "Welche Aussage zur Verbindung von Computerinstallation und Netzwerk passt am besten zum Material?",
+    "options": [
+      "Nach der lokalen Einrichtung müssen Netzwerkverbindung, vorgesehene Zugriffe und die sichere Nutzung ebenfalls geprüft werden",
+      "Eine Netzwerkprüfung ersetzt die Windows-Installation",
+      "Nach der Netzwerkverbindung sind Benutzerrechte irrelevant",
+      "Wenn das LAN-Kabel steckt, sind alle weiteren Tests überflüssig"
+    ],
+    "correct": 0
+  },
+  {
+    "id": 39,
+    "question": "Welche Aussage zum ergonomischen Zweck des Arbeitsplatzes trifft den Kern des Materials?",
+    "options": [
+      "Er soll ausschließlich die Anschaffungskosten senken",
+      "Er soll Fehlhaltungen vermeiden und längeres Arbeiten angenehmer ermöglichen",
+      "Er soll möglichst lange unverändert bleiben, unabhängig von der Person",
+      "Er soll ausschließlich die Rechenleistung des Computers erhöhen"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "question": "Ein Bildschirmarbeitsplatz weist starke Spiegelungen auf. Welche Maßnahme entspricht dem Lernmaterial am direktesten?",
+    "options": [
+      "Die Bildschirmhelligkeit maximal erhöhen",
+      "Den Bildschirm möglichst nah an das Gesicht stellen",
+      "Die Spiegelungen und Blendungen vermeiden",
+      "Die Tastatur weit vom Tischrand entfernen"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 41,
+    "question": "Welche Aussage zur Bildschirmqualität gehört ausdrücklich zu den gesetzlichen Regeln im Material?",
+    "options": [
+      "Der Bildschirm muss immer auf maximaler Helligkeit laufen",
+      "Der Bildschirm soll scharf, flimmerfrei und gut einstellbar sein",
+      "Ein flimmernder Bildschirm ist zulässig, wenn der Computer leistungsfähig ist",
+      "Die Einstellbarkeit des Bildschirms ist nicht relevant"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "question": "Bei der Einstellung eines höhenverstellbaren Schreibtisches soll die Tischplatte beim Stehen ungefähr auf welcher Höhe liegen?",
+    "options": [
+      "Auf Schulterhöhe",
+      "Auf Ellbogenhöhe",
+      "Auf Hüfthöhe",
+      "Auf Augenhöhe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "question": "Ein Arbeitsplatz soll vor der Übergabe geprüft werden. Welche Kombination gehört vollständig zur genannten Checkliste?",
+    "options": [
+      "Nur Computer einschalten und Passwort testen",
+      "Stuhl/Tisch/Bildschirm einstellen, Eingabegeräte erreichbar, Kabel sicher, Fluchtweg frei und Ausstattung testen",
+      "Nur den Drucker testen und die Raumtemperatur messen",
+      "Nur Monitorhelligkeit einstellen und Benutzerkonto anlegen"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "question": "Welche Ausstattung wird im Material dem Einkauf bzw. der Beschaffung zugeordnet?",
+    "options": [
+      "Nur ein Tablet und ein Headset",
+      "Leistungsfähige Workstation und zwei Monitore",
+      "Laptop, Dockingstation und Headset",
       "Standard-PC, zwei Monitore und Scanner"
     ],
-    "a": 0
+    "correct": 3
   },
   {
-    "q": "Welche Reihenfolge beschreibt die vollständige Computereinrichtung?",
-    "opts": [
-      "Anforderungen prüfen → Hardware aufbauen → Windows installieren → System aktualisieren → Schutz einrichten → Programme installieren",
-      "Programme installieren → Schutz einrichten → Windows installieren → Hardware aufbauen → Anforderungen prüfen → System aktualisieren",
-      "Windows installieren → Programme installieren → Anforderungen prüfen → Schutz einrichten → Hardware aufbauen → System aktualisieren",
-      "Hardware aufbauen → Programme installieren → System aktualisieren → Windows installieren → Schutz einrichten → Anforderungen prüfen"
+    "id": 45,
+    "question": "Welche Aussage beschreibt korrekt, was nach der Netzwerkanmeldung getestet werden soll?",
+    "options": [
+      "Nur die lokale Mausbewegung",
+      "Nur die Bildschirmauflösung",
+      "Server, Drucker, Freigaben und Benutzeranmeldung",
+      "Nur die Temperatur des Prozessors"
     ],
-    "a": 0
+    "correct": 2
   },
   {
-    "q": "Was gehört zur Prüfung der Netzwerkeinstellungen?",
-    "opts": [
-      "IP-Adresse automatisch per DHCP oder nach Vorgabe setzen",
-      "IP-Adresse immer auf 127.0.0.1 setzen",
-      "Netzwerkkarte grundsätzlich deaktivieren",
-      "Nur den Monitor neu starten"
+    "id": 46,
+    "question": "Welche Aussage trifft auf die im Material genannten Grundsätze für eine sichere Netzwerknutzung zu?",
+    "options": [
+      "Sicherheit wird ausschließlich durch ein LAN-Kabel hergestellt",
+      "Alle Netzwerkressourcen sollen für jeden Benutzer frei verfügbar sein",
+      "Der Computer soll sicher funktionieren und der Benutzer nur die erlaubten Zugriffe erhalten",
+      "Berechtigungen müssen nicht an die Aufgabe angepasst werden"
     ],
-    "a": 0
+    "correct": 2
   },
   {
-    "q": "Was gehört nach der Anmeldung am Firmennetzwerk zum Zugriffstest?",
-    "opts": [
-      "Server, Drucker, Freigaben und Benutzeranmeldung testen",
-      "Nur die Bildschirmhelligkeit prüfen",
-      "Computer vom Netzwerk trennen und keine Zugriffe testen",
-      "Nur die Lautsprecher testen"
+    "id": 47,
+    "question": "Ein Mitarbeiter benötigt für seine Tätigkeit keinen administrativen Zugriff. Welche Aussage passt zum im Material genannten Sicherheitsprinzip?",
+    "options": [
+      "Alle Benutzer erhalten vorsorglich Administratorrechte",
+      "Sicherer Betrieb bedeutet, möglichst viele Zugriffe freizuschalten",
+      "Benutzerrechte spielen im Firmennetzwerk keine Rolle",
+      "Benutzerrechte sollen passend zur erlaubten Nutzung eingerichtet werden"
     ],
-    "a": 0
+    "correct": 3
   },
   {
-    "q": "Was soll bei der Einrichtung dokumentiert werden?",
-    "opts": [
-      "Gerätename, Standort und durchgeführte Tests",
-      "Nur die private Telefonnummer des Mitarbeiters",
-      "Nur Gehäusefarbe und Monitorgröße",
-      "Nur der Kaufpreis des Computers"
+    "id": 48,
+    "question": "Welche Rechtsgrundlagen werden im Material für den Brandschutz am IT-Arbeitsplatz genannt?",
+    "options": [
+      "Nur das Bürgerliche Gesetzbuch",
+      "Nur § 5 ArbSchG",
+      "ArbStättV § 4 und Anhang 2.2/2.3 sowie ASR A2.2 und A2.3",
+      "Ausschließlich interne Firmenrichtlinien"
     ],
-    "a": 0
+    "correct": 2
   },
   {
-    "q": "Wie soll die obere Bildschirmkante eingestellt werden?",
-    "opts": [
-      "Ungefähr auf Augenhöhe",
-      "Ungefähr auf Kniehöhe",
-      "Deutlich über Kopfhöhe",
-      "Direkt auf Tischplattenhöhe"
+    "id": 49,
+    "question": "Welche Maßnahme gehört zur Vorbeugung gegen Brandgefahren am IT-Arbeitsplatz?",
+    "options": [
+      "Steckdosenleisten möglichst vollständig auslasten",
+      "Beschädigte Kabel weiterverwenden, solange der PC startet",
+      "Fluchtwege mit Geräten zustellen, damit diese schnell erreichbar sind",
+      "Kabel ordentlich verlegen und Steckdosenleisten nicht überlasten"
     ],
-    "a": 0
+    "correct": 3
   },
   {
-    "q": "Wie wird die Höhe des Schreibtisches laut Anleitung verändert?",
-    "opts": [
-      "Mit den Pfeiltasten rechts am Tisch",
-      "Durch Drehen der Monitorhalterung",
-      "Durch Verschieben der Tastatur",
-      "Durch Abschrauben der Tischbeine"
+    "id": 50,
+    "question": "Welche Maßnahmengruppe gehört im Material zum Einrichten des Schutzes eines Computers?",
+    "options": [
+      "Nur Druckertreiber und Lautstärke",
+      "Nur Bildschirmauflösung und Tastaturbelegung",
+      "Firewall, Virenschutz, Verschlüsselung und Benutzerrechte",
+      "Ausschließlich Desktop-Hintergrund und Energiesparmodus"
     ],
-    "a": 0
-  },
-  {
-    "q": "Warum wird die Tischhöhe für jede Person angepasst?",
-    "opts": [
-      "Damit Rücken, Nacken und Schultern möglichst entspannt bleiben",
-      "Damit alle Mitarbeiter exakt dieselbe Körperhaltung einnehmen",
-      "Damit der Monitor für alle gleich hoch bleibt",
-      "Damit nur im Sitzen gearbeitet werden kann"
-    ],
-    "a": 0
-  },
-  {
-    "q": "Was umfasst die Checkliste vor der Übergabe?",
-    "opts": [
-      "Arbeitsplatz einstellen, Erreichbarkeit und Sicherheit prüfen, Ausstattung testen und Mitarbeiter einweisen",
-      "Nur den Computer einschalten",
-      "Nur den Fluchtweg prüfen",
-      "Nur Kabel kontrollieren"
-    ],
-    "a": 0
-  },
-  {
-    "q": "Welche organisatorische Maßnahme wird für Bildschirmarbeit genannt?",
-    "opts": [
-      "Bildschirmarbeit durch andere Tätigkeiten oder Erholungszeiten unterbrechen",
-      "Bildschirmarbeit ohne Unterbrechung ausdehnen",
-      "Unterbrechungen nur bei flimmerndem Bildschirm",
-      "Nur eine lange Pause am Ende des Arbeitstags"
-    ],
-    "a": 0
-  },
-  {
-    "q": "Welche Kernaussage fasst das Projekt zusammen?",
-    "opts": [
-      "Ein guter Arbeitsplatz passt zur Person und zur Arbeitsaufgabe",
-      "Ein guter Arbeitsplatz ist für alle Personen und Aufgaben identisch",
-      "Ein guter Arbeitsplatz wird ausschließlich nach dem Kaufpreis ausgewählt",
-      "Ein guter Arbeitsplatz benötigt keine Sicherheitsprüfung"
-    ],
-    "a": 0
+    "correct": 2
   }
 ]
