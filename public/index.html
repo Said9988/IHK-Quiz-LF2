@@ -1,45 +1,38 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IHK Quiz – Ergonomischer IT-Arbeitsplatz</title>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IHK Quiz LF2</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#07131f,#0b3550);color:#f5fbff;font-family:Segoe UI,Arial,sans-serif;min-height:100vh}.wrap{width:min(1050px,94vw);margin:auto;padding:28px 0}.card{background:#102b3d;border:1px solid #2b5870;border-radius:22px;padding:28px;box-shadow:0 20px 60px #0006}h1{font-size:clamp(34px,6vw,62px);line-height:1;margin:10px 0}h2{margin-top:0}p{color:#b4c9d4;line-height:1.55}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.btn{border:0;border-radius:13px;padding:14px 20px;font-weight:800;cursor:pointer}.primary{background:#b9f35d;color:#14200c}.secondary{background:#176078;color:#fff}input{width:100%;padding:14px;border-radius:12px;border:1px solid #37677e;background:#081b29;color:white;margin-bottom:10px}.hidden{display:none}.center{text-align:center}.code{font-size:54px;font-weight:1000;letter-spacing:9px;color:#b9f35d}.players{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.pill{background:#173f52;padding:7px 11px;border-radius:99px}.top{display:flex;justify-content:space-between}.progress{height:9px;background:#173847;border-radius:99px;overflow:hidden}.bar{height:100%;background:#b9f35d}.question{font-size:clamp(23px,4vw,37px);font-weight:850;margin:24px 0}.answers{display:grid;grid-template-columns:1fr 1fr;gap:14px}.answer{min-height:100px;text-align:left;padding:18px;border-radius:16px;border:2px solid #2b5970;background:#14374b;color:white;font-size:17px;font-weight:700;cursor:pointer}.answer:hover{background:#1a4860}.answer.correct{background:#175335;border-color:#79e49e}.answer.wrong{background:#552b35;border-color:#ff7b7b}.row{display:grid;grid-template-columns:45px 1fr auto;gap:12px;align-items:center;background:#0b2232;padding:13px;border-radius:12px;margin:8px 0}.score{color:#b9f35d;font-weight:900}.notice{margin-top:14px;background:#0b2332;border:1px solid #28556c;border-radius:12px;padding:12px;color:#c8dbe4}@media(max-width:700px){.grid,.answers{grid-template-columns:1fr}.card{padding:20px}}
-</style></head><body><div class="wrap">
-<div id="home" class="card"><div class="pill">IHK · Lernfeld 02</div><h1>Quiz-Arena</h1><p>Ergonomischer IT-Arbeitsplatz · 20 IHK-orientierte Fragen · bis zu 4 Spieler inklusive Host.</p>
-<div class="grid"><div class="card"><h2>Host</h2><p>Du bist gleichzeitig Spieler 1 und Spielleiter.</p><input id="hostName" maxlength="18" placeholder="Dein Name"><button class="btn primary" onclick="create()">Raum erstellen</button></div>
-<div class="card"><h2>Spieler</h2><input id="code" maxlength="4" placeholder="Raumcode"><input id="name" maxlength="18" placeholder="Dein Name"><button class="btn secondary" onclick="join()">Beitreten</button></div></div>
-<div id="msg" class="notice hidden"></div></div>
-<div id="lobby" class="card hidden center"><div>Raumcode</div><div id="room" class="code"></div><h2>Lobby</h2><div id="players" class="players"></div><div id="lobbyMsg" class="notice"></div><button id="start" class="btn primary hidden" style="margin-top:18px" onclick="start()">Erste Frage starten</button></div>
-<div id="quiz" class="card hidden"><div class="top"><span id="qn"></span><b id="timer">20</b></div><div class="progress"><div id="bar" class="bar"></div></div><div id="q" class="question"></div><div id="answers" class="answers"></div><div id="status" class="notice"></div><button id="next" class="btn primary hidden" style="margin-top:16px" onclick="next()">Nächste Frage</button></div>
-<div id="result" class="card hidden"><div class="center"><h1 id="resultTitle">Ergebnis</h1><p id="correct"></p></div><div id="board"></div><div class="center"><button id="next2" class="btn primary hidden" onclick="next()">Nächste Frage</button></div></div>
-<div id="final" class="card hidden center"><h1>Endergebnis</h1><div id="finalBoard"></div></div>
-</div>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#111827,#312e81);color:#fff;min-height:100vh}
+.wrap{max-width:1050px;margin:auto;padding:24px}.card{background:rgba(255,255,255,.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.15);border-radius:22px;padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+h1{font-size:clamp(28px,5vw,48px);margin:0 0 8px}.muted{opacity:.75}.row{display:flex;gap:12px;flex-wrap:wrap}input,button{font:inherit;border-radius:12px;border:0;padding:14px 16px}input{width:100%;max-width:420px}button{cursor:pointer;font-weight:700;background:#fff;color:#111827}button.primary{background:#facc15}button:disabled{opacity:.45;cursor:not-allowed}
+#app{margin-top:18px}.code{font-size:46px;letter-spacing:8px;font-weight:900}.players{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0}.player{background:rgba(255,255,255,.1);padding:14px;border-radius:12px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center}.timer{font-size:40px;font-weight:900}.bar{height:10px;background:rgba(255,255,255,.2);border-radius:20px;overflow:hidden}.fill{height:100%;width:100%;background:#facc15;transition:width 1s linear}.q{font-size:clamp(23px,3vw,34px);font-weight:800;line-height:1.25;margin:25px 0}.answers{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ans{min-height:110px;text-align:left;color:#fff;font-size:18px;background:#2563eb}.ans:nth-child(2){background:#dc2626}.ans:nth-child(3){background:#16a34a}.ans:nth-child(4){background:#d97706}.ans.selected{outline:5px solid #fff}.leader{display:grid;gap:8px}.rank{display:flex;justify-content:space-between;background:rgba(255,255,255,.1);padding:14px;border-radius:12px;font-size:19px}.small{font-size:14px;opacity:.75}@media(max-width:650px){.answers{grid-template-columns:1fr}.wrap{padding:12px}.card{padding:20px}}
+</style>
+</head>
+<body><div class="wrap"><div class="card">
+<h1>🎯 IHK Quiz – LF2</h1><div class="muted">Ergonomischer IT-Arbeitsplatz · 50 Fragen · 60 Sekunden</div>
+<div id="app"></div>
+</div></div>
 <script>
-let ws,role,id,room,state,q,timer,myAnswered=false;
-const $=x=>document.getElementById(x);
-function show(x){["home","lobby","quiz","result","final"].forEach(y=>$(y).classList.add("hidden"));$(x).classList.remove("hidden")}
-function connect(){ws=new WebSocket((location.protocol==="https:"?"wss://":"ws://")+location.host);ws.onopen=()=>{};ws.onmessage=e=>handle(JSON.parse(e.data));ws.onclose=()=>{if(role) alert("Verbindung zum Quizserver wurde beendet.")};ws.onerror=()=>alert("Serververbindung fehlgeschlagen.");}
-function create(){let n=$("hostName").value.trim();if(!n)return alert("Bitte deinen Namen eingeben.");role="host";connect();ws.onopen=()=>ws.send(JSON.stringify({type:"create",name:n}))}
-function join(){let c=$("code").value.trim().toUpperCase(),n=$("name").value.trim();if(c.length!==4||!n)return alert("Raumcode und Name eingeben.");role="player";room=c;connect();ws.onopen=()=>ws.send(JSON.stringify({type:"join",code:c,name:n}))}
-function handle(m){
- if(m.type==="error"){alert(m.message);return}
- if(m.type==="created"){state=m.state;room=state.code;$("room").textContent=room;$("start").classList.remove("hidden");$("lobbyMsg").textContent="Teile den Code mit bis zu 3 weiteren Spielern.";show("lobby");renderPlayers();return}
- if(m.type==="joined"){id=m.id;state=m.state;room=state.code;$("room").textContent=room;$("lobbyMsg").textContent="Du bist drin. Warte auf den Host.";show("lobby");renderPlayers();return}
- if(m.type==="lobby"){state=m.state;renderPlayers();return}
- if(m.type==="question"){q=m.question;state=m.state;myAnswered=false;renderQuestion();return}
- if(m.type==="progress"){state=m.state;updateStatus();return}
- if(m.type==="answerSaved"){myAnswered=true;$("status").textContent="Antwort gespeichert – warte auf die anderen.";return}
- if(m.type==="results"){state=m.state;renderResult(m.correct);return}
- if(m.type==="final"){state=m.state;renderFinal();return}
- if(m.type==="closed"){alert("Der Host hat den Raum geschlossen.");location.reload()}
-}
-function renderPlayers(){$("players").innerHTML=state.players.map(p=>`<span class="pill">${esc(p.name)}</span>`).join("")}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
-function start(){ws.send(JSON.stringify({type:"start"}))}
-function next(){ws.send(JSON.stringify({type:"next"}))}
-function renderQuestion(){show("quiz");$("qn").textContent=`Frage ${state.qIndex+1} / 20`;$("bar").style.width=((state.qIndex+1)/20*100)+"%";$("q").textContent=q.q;$("answers").innerHTML=q.opts.map((o,i)=>`<button class="answer" onclick="answer(${i})"><b>${String.fromCharCode(65+i)}.</b> ${esc(o)}</button>`).join("");$("status").textContent="Wähle eine Antwort."; $("next").classList.add("hidden");let left=20;clearInterval(timer);$("timer").textContent=left;timer=setInterval(()=>{left--;$("timer").textContent=left;if(left<=0){clearInterval(timer);if(!myAnswered)ws.send(JSON.stringify({type:"answer",choice:-1}));if(role==="host")ws.send(JSON.stringify({type:"end"}))}},1000);updateStatus()}
-function answer(i){if(myAnswered)return;myAnswered=true;document.querySelectorAll(".answer").forEach(x=>x.disabled=true);ws.send(JSON.stringify({type:"answer",choice:i}))}
-function updateStatus(){$("status").textContent=`Antworten: ${state.answered}/${state.total}`+(myAnswered?" · Deine Antwort wurde gespeichert.":"")}
-function boardHtml(){return [...state.players].sort((a,b)=>b.score-a.score).map((p,i)=>`<div class="row"><b>${i+1}</b><span>${esc(p.name)}</span><b class="score">${p.score.toLocaleString("de-DE")} P</b></div>`).join("")}
-function renderResult(correct){clearInterval(timer);show("result");$("resultTitle").textContent=`Frage ${state.qIndex+1} Ergebnis`;$("correct").textContent=`Richtige Antwort: ${q.opts[correct]}`;$("board").innerHTML=boardHtml();$("next2").classList.toggle("hidden",role!=="host");}
-function renderFinal(){show("final");$("finalBoard").innerHTML=boardHtml()}
-</script></body></html>
+let ws,id,hostId,code="",isHost=false,selected=false,timerInt=null;
+const app=document.getElementById("app");
+function connect(){ws=new WebSocket((location.protocol==="https:"?"wss://":"ws://")+location.host);ws.onmessage=e=>handle(JSON.parse(e.data));ws.onclose=()=>{}}
+function send(x){if(ws&&ws.readyState===1)ws.send(JSON.stringify(x))}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function home(){app.innerHTML=`<h2>Neues Spiel starten</h2><p class="muted">Der Host spielt selbst mit und zählt als Spieler 1. Maximal 4 Personen.</p><div class="row"><input id="name" placeholder="Dein Name" maxlength="24"><button class="primary" onclick="create()">Raum erstellen</button></div><hr style="margin:24px 0;border-color:#ffffff22"><h2>Beitreten</h2><div class="row"><input id="jname" placeholder="Dein Name" maxlength="24"><input id="code" placeholder="4-stelliger Code" maxlength="4" style="max-width:180px;text-transform:uppercase"><button onclick="join()">Beitreten</button></div>`}
+function create(){let n=document.getElementById("name").value.trim()||"Host";send({type:"create",name:n})}
+function join(){let n=document.getElementById("jname").value.trim()||"Spieler";let c=document.getElementById("code").value.trim().toUpperCase();send({type:"join",name:n,code:c})}
+function lobby(state){code=state.code;isHost=id===state.hostId;hostId=state.hostId;app.innerHTML=`<div class="small">SPIELCODE</div><div class="code">${code}</div><h2>Spieler</h2><div class="players" id="players"></div><div class="row">${isHost?'<button class="primary" onclick="start()">Spiel starten</button>':''}<button onclick="send({type:'state'})">Aktualisieren</button></div>`;drawPlayers(state)}
+function drawPlayers(state){let el=document.getElementById("players");if(!el)return;el.innerHTML=state.players.map(p=>`<div class="player"><b>${escapeHtml(p.name)}</b><br><span class="small">${p.id===state.hostId?"HOST · ":""}${p.score} Punkte</span></div>`).join("")}
+function start(){send({type:"start"})}
+function question(m){selected=false;clearInterval(timerInt);let end=m.startedAt+60000;app.innerHTML=`<div class="top"><div><b>Frage ${m.questionIndex+1} / ${m.total}</b></div><div class="timer" id="timer">60</div></div><div class="bar"><div class="fill" id="fill"></div></div><div class="q">${escapeHtml(m.question)}</div><div class="answers">${m.options.map((x,i)=>`<button class="ans" onclick="answer(${i},this)"><b>${"ABCD"[i]}</b><br>${escapeHtml(x)}</button>`).join("")}</div>`;timerInt=setInterval(()=>{let left=Math.max(0,Math.ceil((end-Date.now())/1000));document.getElementById("timer").textContent=left;document.getElementById("fill").style.width=(left/60*100)+"%";if(left<=0)clearInterval(timerInt)},250)}
+function answer(i,el){if(selected)return;selected=true;el.classList.add("selected");document.querySelectorAll(".ans").forEach(b=>b.disabled=true);send({type:"answer",answer:i})}
+function results(m){clearInterval(timerInt);app.innerHTML=`<h2>Ergebnis</h2><p class="muted">Richtige Antwort: ${"ABCD"[m.correct]}</p><div class="leader">${m.results.map((p,i)=>`<div class="rank"><span>${i+1}. ${escapeHtml(p.name)} ${p.correct?"✓":"—"}</span><b>${p.score}</b></div>`).join("")}</div><div style="margin-top:18px">${isHost?'<button class="primary" onclick="next()">Nächste Frage</button>':'<div class="muted">Warte auf den Host …</div>'}</div>`}
+function next(){send({type:"next"})}
+function finished(m){app.innerHTML=`<h2>🏆 Endstand</h2><div class="leader">${m.leaderboard.map(p=>`<div class="rank"><span>${p.rank}. ${escapeHtml(p.name)}</span><b>${p.score} Punkte</b></div>`).join("")}</div><br><button onclick="location.reload()">Neues Spiel</button>`}
+function handle(m){if(m.type==="connected"){id=m.id;home()}else if(m.type==="created"){id=m.hostId;lobby(m.state)}else if(m.type==="joined"){lobby(m.state)}else if(m.type==="lobby"){lobby(m.state)}else if(m.type==="question"){question(m)}else if(m.type==="results"){results(m)}else if(m.type==="finished"){finished(m)}else if(m.type==="error"){alert(m.message)}}
+connect();
+</script>
+</body></html>
