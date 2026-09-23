@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IHK Quiz LF2</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#111827,#312e81);color:#fff;min-height:100vh}
+.wrap{max-width:1050px;margin:auto;padding:24px}.card{background:rgba(255,255,255,.1);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.15);border-radius:22px;padding:28px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+h1{font-size:clamp(28px,5vw,48px);margin:0 0 8px}.muted{opacity:.75}.row{display:flex;gap:12px;flex-wrap:wrap}input,button{font:inherit;border-radius:12px;border:0;padding:14px 16px}input{width:100%;max-width:420px}button{cursor:pointer;font-weight:700;background:#fff;color:#111827}button.primary{background:#facc15}button:disabled{opacity:.45;cursor:not-allowed}
+#app{margin-top:18px}.code{font-size:46px;letter-spacing:8px;font-weight:900}.players{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:18px 0}.player{background:rgba(255,255,255,.1);padding:14px;border-radius:12px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center}.timer{font-size:40px;font-weight:900}.bar{height:10px;background:rgba(255,255,255,.2);border-radius:20px;overflow:hidden}.fill{height:100%;width:100%;background:#facc15;transition:width 1s linear}.q{font-size:clamp(23px,3vw,34px);font-weight:800;line-height:1.25;margin:25px 0}.answers{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ans{min-height:110px;text-align:left;color:#fff;font-size:18px;background:#2563eb}.ans:nth-child(2){background:#dc2626}.ans:nth-child(3){background:#16a34a}.ans:nth-child(4){background:#d97706}.ans.selected{outline:5px solid #fff}.leader{display:grid;gap:8px}.rank{display:flex;justify-content:space-between;background:rgba(255,255,255,.1);padding:14px;border-radius:12px;font-size:19px}.small{font-size:14px;opacity:.75}@media(max-width:650px){.answers{grid-template-columns:1fr}.wrap{padding:12px}.card{padding:20px}}
+</style>
+</head>
+<body><div class="wrap"><div class="card">
+<h1>🎯 IHK Quiz – LF2</h1><div class="muted">Ergonomischer IT-Arbeitsplatz · 50 Fragen · 60 Sekunden</div>
+<div id="app"></div>
+</div></div>
+<script>
+let ws,id,hostId,code="",isHost=false,selected=false,timerInt=null;
+const app=document.getElementById("app");
+function connect(){ws=new WebSocket((location.protocol==="https:"?"wss://":"ws://")+location.host);ws.onmessage=e=>handle(JSON.parse(e.data));ws.onclose=()=>{}}
+function send(x){if(ws&&ws.readyState===1)ws.send(JSON.stringify(x))}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function home(){app.innerHTML=`<h2>Neues Spiel starten</h2><p class="muted">Der Host spielt selbst mit und zählt als Spieler 1. Maximal 4 Personen.</p><div class="row"><input id="name" placeholder="Dein Name" maxlength="24"><button class="primary" onclick="create()">Raum erstellen</button></div><hr style="margin:24px 0;border-color:#ffffff22"><h2>Beitreten</h2><div class="row"><input id="jname" placeholder="Dein Name" maxlength="24"><input id="code" placeholder="4-stelliger Code" maxlength="4" style="max-width:180px;text-transform:uppercase"><button onclick="join()">Beitreten</button></div>`}
+function create(){let n=document.getElementById("name").value.trim()||"Host";send({type:"create",name:n})}
+function join(){let n=document.getElementById("jname").value.trim()||"Spieler";let c=document.getElementById("code").value.trim().toUpperCase();send({type:"join",name:n,code:c})}
+function lobby(state){code=state.code;isHost=id===state.hostId;hostId=state.hostId;app.innerHTML=`<div class="small">SPIELCODE</div><div class="code">${code}</div><h2>Spieler</h2><div class="players" id="players"></div><div class="row">${isHost?'<button class="primary" onclick="start()">Spiel starten</button>':''}<button onclick="send({type:'state'})">Aktualisieren</button></div>`;drawPlayers(state)}
+function drawPlayers(state){let el=document.getElementById("players");if(!el)return;el.innerHTML=state.players.map(p=>`<div class="player"><b>${escapeHtml(p.name)}</b><br><span class="small">${p.id===state.hostId?"HOST · ":""}${p.score} Punkte</span></div>`).join("")}
+function start(){send({type:"start"})}
+function question(m){selected=false;clearInterval(timerInt);let end=m.startedAt+60000;app.innerHTML=`<div class="top"><div><b>Frage ${m.questionIndex+1} / ${m.total}</b></div><div class="timer" id="timer">60</div></div><div class="bar"><div class="fill" id="fill"></div></div><div class="q">${escapeHtml(m.question)}</div><div class="answers">${m.options.map((x,i)=>`<button class="ans" onclick="answer(${i},this)"><b>${"ABCD"[i]}</b><br>${escapeHtml(x)}</button>`).join("")}</div>`;timerInt=setInterval(()=>{let left=Math.max(0,Math.ceil((end-Date.now())/1000));document.getElementById("timer").textContent=left;document.getElementById("fill").style.width=(left/60*100)+"%";if(left<=0)clearInterval(timerInt)},250)}
+function answer(i,el){if(selected)return;selected=true;el.classList.add("selected");document.querySelectorAll(".ans").forEach(b=>b.disabled=true);send({type:"answer",answer:i})}
+function results(m){clearInterval(timerInt);app.innerHTML=`<h2>Ergebnis</h2><p class="muted">Richtige Antwort: ${"ABCD"[m.correct]}</p><div class="leader">${m.results.map((p,i)=>`<div class="rank"><span>${i+1}. ${escapeHtml(p.name)} ${p.correct?"✓":"—"}</span><b>${p.score}</b></div>`).join("")}</div><div style="margin-top:18px">${isHost?'<button class="primary" onclick="next()">Nächste Frage</button>':'<div class="muted">Warte auf den Host …</div>'}</div>`}
+function next(){send({type:"next"})}
+function finished(m){app.innerHTML=`<h2>🏆 Endstand</h2><div class="leader">${m.leaderboard.map(p=>`<div class="rank"><span>${p.rank}. ${escapeHtml(p.name)}</span><b>${p.score} Punkte</b></div>`).join("")}</div><br><button onclick="location.reload()">Neues Spiel</button>`}
+function handle(m){if(m.type==="connected"){id=m.id;home()}else if(m.type==="created"){id=m.hostId;lobby(m.state)}else if(m.type==="joined"){lobby(m.state)}else if(m.type==="lobby"){lobby(m.state)}else if(m.type==="question"){question(m)}else if(m.type==="results"){results(m)}else if(m.type==="finished"){finished(m)}else if(m.type==="error"){alert(m.message)}}
+connect();
+</script>
+</body></html>
